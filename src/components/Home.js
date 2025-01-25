@@ -60,7 +60,6 @@ export default Home;*/
 
 import React, { useState, useEffect } from 'react';
 import Feed from './Feed.js'; // Assuming Feed component displays tasks
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from './NavBar';
 import '../App.css';
