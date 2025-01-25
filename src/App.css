@@ -1,0 +1,129 @@
+.background-container{
+  height: 100vh;
+  background-size: cover;
+  width: 100%;
+ 
+}
+/* AnimatedForm.css */
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #a31515;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  
+}
+
+.form-data.form-enter {
+  opacity: 1; /* Animate to visible */
+  transform: translateY(0); /* Animate from top */
+}
+
+
+
+/* App.css (or a separate TaskList.css if you prefer) */
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light background for the overall page */
+  font-family: sans-serif;
+  padding: 20px; /* Add some padding around the content */
+}
+
+.task-management-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #fff; /* White background for the form container */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-management-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-data input,
+.form-data textarea {
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border for inputs/textarea */
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+  background-color: #fff; /* Explicitly set input background to white */
+  color: #333; /* Dark text color for readability on white background */
+  transition: border-color 0.3s ease;
+}
+
+.form-data input:focus,
+.form-data textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.form-data button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-data button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the Feed component (adjust as needed) */
+.feed-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feed-container h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.image-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* Prevent image overflow */
+}
+
+.image-item img {
+  width: 100%;
+  display: block; /* Prevent extra space below image */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  height: 200px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

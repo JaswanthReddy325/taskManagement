@@ -1,0 +1,71 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; /* Increased padding */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar:hover {
+    background-color: #f8f9fa;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Darker text color */
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #007bff; /* Blue hover color */
+}
+
+.navbar-links {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.navbar-link {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #555; /* Slightly lighter text color */
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #007bff; /* Blue hover color */
+    transform: scale(1.1); /* Scale on hover for a subtle animation */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #dc3545; /* Red */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: scale(1.05);
+}

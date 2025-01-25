@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .login-container {
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: slideIn 0.8s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .login-box {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #66a6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #89f7fe;
+  }
+  
+  .google-button {
+    width: 90%;
+    padding: 10px;
+    background-color: #db4437;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .google-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .or {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .forgot-password {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .reset-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .reset-button:hover {
+    background-color: #0056b3;
+  }
+  
