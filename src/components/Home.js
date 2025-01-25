@@ -58,8 +58,7 @@ const Home = ({ onTaskCreate }) => {
 export default Home;*/
 // frontend/src/components/TaskList.js
 
-import React, { useState, useEffect, useContext } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import React, { useState, useEffect } from 'react';
 import Feed from './Feed.js'; // Assuming Feed component displays tasks
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -70,8 +69,6 @@ function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchTasks();
@@ -88,25 +85,7 @@ function TaskList() {
     }
   };
 
-  const handleOnDragEnd = async (result) => {
-    if (!result.destination) return;
-    const { source, destination, draggableId } = result;
-
-    if (source.droppableId !== destination.droppableId) {
-      try {
-        await axios.put(
-          `/api/tasks/${draggableId}`,
-          { status: destination.droppableId },
-          {
-            headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
-          }
-        );
-        fetchTasks();
-      } catch (error) {
-        console.error('Error updating task status:', error);
-      }
-    }
-  };
+ 
 
   const handleAddTask = async (e) => {
     e.preventDefault();
@@ -128,19 +107,7 @@ function TaskList() {
     }
   };
 
-  const handleDeleteTask = async (taskId) => {
-    if (window.confirm('Are you sure you want to delete this task?')) {
-      try {
-        await axios.delete(`/api/tasks/${taskId}`, {
-          headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
-        });
-        fetchTasks();
-      } catch (error) {
-        console.error('Error deleting task:', error);
-      }
-    }
-  };
-
+  
   return (
     <div className="task-list-container">
       <NavBar />
