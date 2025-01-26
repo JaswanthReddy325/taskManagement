@@ -69,9 +69,7 @@ function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
 
-  useEffect(() => {
-    fetchTasks();
-  }, []);
+  
 
   const fetchTasks = async () => {
     try {
