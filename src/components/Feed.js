@@ -140,7 +140,7 @@ function Feed() {
 }
 
 export default Feed; */
-import React, { useState,useEffect  } from 'react';
+import React, { useState  } from 'react';
 import './Feed.css'; // Import your CSS file
 
 
@@ -163,28 +163,7 @@ function Feed() {
     // Fetch uploaded images on component mount
     
 
-    const fetchUploadedImages = async () => {
-        try {
-            const response = await fetch(
-                `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`,
-                {
-                  headers: {
-                    Authorization: `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
-                  },
-                }
-              );
-          if (!response.ok) {
-            throw new Error(`Failed to fetch images: ${response.status}`);
-          }
-          
-          const data = await response.json();
-          console.log(data);
-          setUploadedImages(data.resources);
-        } catch (error) {
-          console.error('Error fetching images:', error);
-          setError("Failed to load uploaded images.");
-        }
-      };
+    
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
