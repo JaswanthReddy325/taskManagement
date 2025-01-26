@@ -258,14 +258,14 @@ function Feed() {
        <div className="uploaded-images-container">
         <h2>Previously Uploaded Images</h2>
         <div className="image-grid">
-          {uploadedImages.length === 0 && !error && !loading && <p>No images uploaded yet.</p>}
+          {/* {uploadedImages.length === 0 && !error && !loading && <p>No images uploaded yet.</p>}
           {error && <p className="error-message">{error}</p>}
           {uploadedImages.map((image) => (
             <div key={image.asset_id} className="image-item">
               <img src={image.secure_url} alt={image.public_id} />
-              {/* You can display other image metadata here if needed */}
+              
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
