@@ -58,7 +58,7 @@ const Home = ({ onTaskCreate }) => {
 export default Home;*/
 // frontend/src/components/TaskList.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Feed from './Feed.js'; // Assuming Feed component displays tasks
 import axios from 'axios';
 import NavBar from './NavBar';
@@ -68,22 +68,7 @@ function TaskList() {
   const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
-
   
-
-  const fetchTasks = async () => {
-    try {
-      const res = await axios.get('/api/tasks', {
-        headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
-      });
-      setTasks(res.data);
-    } catch (error) {
-      console.error('Error fetching tasks:', error);
-    }
-  };
-
- 
-
   const handleAddTask = async (e) => {
     e.preventDefault();
     if (newTaskTitle.trim() === '') return;
