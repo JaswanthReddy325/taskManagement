@@ -161,9 +161,7 @@ function Feed() {
     const uploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET;
   
     // Fetch uploaded images on component mount
-    useEffect(() => {
-      fetchUploadedImages();
-    }, []);
+    
 
     const fetchUploadedImages = async () => {
         try {
